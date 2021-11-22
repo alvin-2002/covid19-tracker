@@ -1,0 +1,50 @@
+nav{
+    background-color:  #e1ddd2 !important;
+}
+
+
+
+.fa-bars{
+    font-size:30px;
+    margin:5px;
+   -webkit-transition: all 0.5s;
+   transition: all 0.5s;
+}
+.fa-bars:hover{
+ font-size: 40px;
+ transform: rotate(45deg);
+}
+
+.icon {
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+    height: 30px;
+    width: 30px;
+}
+
+.icon .line {
+    position: absolute;
+    top: 4px;
+    left: 6px;
+    transition: transform .6s;
+}
+
+.active.icon .line {
+    left: 8px;
+}
+
+.icon .line2 {
+    opacity: 0;
+}
+
+.active.icon .line1 {
+    transform: rotate(90deg);
+    opacity: 0;
+}
+  
+
+.active.icon .line2 {
+    transform: rotate(90deg);
+    opacity: 1;
+}

@@ -1,0 +1,9 @@
+<div *ngIf="countriesData.length" class="bg-color">
+    <div class="form-group">
+        <input type="text" placeholder="Search..." [(ngModel)]="filterCountry">
+    </div>
+    <div class="main">
+        <div *ngFor="let country of countriesData | filter:filterCountry | sorting:'country':'Ascending'" class="mb-3">
+        <app-country-card [country]="country"></app-country-card>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+
+<!-- <div class="main"> -->
+    <div class="graph-card">
+        <!-- <ul class="nav nav-tabs">
+            <li class="nav-item" (click)="isNewCases(uniqueId)">Daily</li>
+            <li class="nav-item" (click)="isTotalCases(uniqueId)">Linear</li>
+        </ul> -->
+        <!-- <button (click)="isNewCases(uniqueId)"> New Cases</button>
+        <button (click)="isTotalCases(uniqueId)"> Total Cases</button> -->
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+              <a [ngClass]="status ? 'active' : ''" 
+              class="nav-link" (click)="isNewCases(uniqueId)">Daily</a>
+            </li>
+            <li class="nav-item">
+              <a [ngClass]="status ? '' : 'active'"  
+              class="nav-link" (click)="isTotalCases(uniqueId)">Linear</a>
+            </li>
+        </ul>
+        <br>
+        <h5 style="text-align: center;"> {{ displayHeading }}</h5>
+        <div class="graph-wrapper">
+          <canvas id="{{ uniqueId }}"></canvas>
+        </div>
+    </div>
+<!-- </div> -->

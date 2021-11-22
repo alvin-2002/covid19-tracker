@@ -1,0 +1,40 @@
+<div *ngIf="finalData.length" class="main">
+  <div class="last-update">Last update: {{ lastUpdate | date: 'dd/MMM/yyyy'}}</div>
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th  
+              *ngFor="let item of tableName; let i = index"
+              (click)="filter(i)" 
+              scope="col"
+            >
+
+            <div>
+              {{ item.name }} 
+                <fa-icon 
+                 *ngIf="finalData.length > 1"
+                 [icon]= "item.icon"
+                 [ngClass]="{highlight: item.icon.iconName !== 'exchange-alt'}"
+                 [rotate]="item.icon.iconName === 'exchange-alt' ? 90 : undefined"
+                >
+                </fa-icon>
+
+            </div>
+
+            </th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let province of (finalData | sorting: column: order)">
+          <tr>
+            <th scope="row">{{ province.Province }}</th>
+            <td>{{ province.Confirmed }} </td>
+            <td>{{ province.TotalCases }} </td>
+            <td>{{ province.Deaths }}</td>
+            <td>{{ province.TotalDeaths }}</td>
+            <!-- <td>{{ province.Date | date: 'dd/MMM/yyyy'}}</td> -->
+          </tr>
+        </tbody>
+    </table>
+    <!-- <hr> -->
+</div>
+

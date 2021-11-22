@@ -1,0 +1,13 @@
+<div class="card" routerLink='/countries/{{ country?.countryInfo?.iso2 | lowercase }}'>
+    <img class="card-img-top" src="{{ country?.countryInfo?.flag }}" onerror="this.src = '/assets/not-found.jpg'" alt="{{ country?.countryInfo?.iso2 }}">
+    <div class="card-body">
+      <h5 class="card-title">{{ country?.country }}</h5>
+      <p> Total Case: {{ country?.cases }}</p>
+      <p> New Case: {{ country?.todayCases }}</p>
+      <p> Total Deaths: {{ country?.deaths }}</p>
+      <p> Today Death: {{ country?.todayDeaths }}</p>
+      <p> Total Recovered: {{ country?.recovered }}</p>
+      <p> Today Recovered: {{ country?.todayRecovered }}</p>
+      <div class="last-update">Last update: {{ country?.updated | date: 'dd/MMM/yyyy'}}</div>
+    </div>
+</div>

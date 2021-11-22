@@ -1,0 +1,21 @@
+.main{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.form-group {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+.form-group input {
+    width: 300px;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+}
+
+.bg-color {
+    background-color: #faf6ea ;
+}

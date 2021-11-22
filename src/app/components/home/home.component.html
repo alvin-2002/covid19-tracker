@@ -1,0 +1,50 @@
+
+    <div class="main">
+        <div class="title">COVID-19 Coronavirus Pandemic</div>
+        <span class="lastUpdate">Last Update: {{ globalData.updated | date: 'MMMM dd, yyyy'}}</span>
+        <div class="center">
+              <div class="card">
+                <div class="card-body">
+                  <h6 class="card-title">Daily Global Cases</h6>
+                  <div class="content">
+                    <div class="cases data">
+                        <p>Currently Infected Patients</p>
+                        <span>{{ globalData.todayCases | number: '2.'}}</span>
+                    </div>
+                    <div class="deaths data">
+                        <p>New Deaths</p>
+                        <span>{{ globalData.todayDeaths | number: '2.'}}</span>
+                    </div>
+                    <div class="recovered data">
+                        <p>New Recovered</p>
+                        <span>{{ globalData.todayRecovered | number: '2.'}}</span>
+                    </div>
+                  </div>
+                </div>
+
+            </div>
+              <div class="card">
+                <div class="card-body">
+                  <h6 class="card-title">Total Global Cases</h6>
+                  <div class="content">
+                    <div class="cases data">
+                        <p>Total Infected Patients</p>
+                        <span>{{ globalData.cases | number: '2.'}}</span>
+                    </div>
+                    <div class="deaths data">
+                        <p>Total Deaths</p>
+                        <span>{{ globalData.deaths | number: '2.'}}</span>
+                    </div>
+                    <div class="recovered data">
+                        <p>Total Recovered</p>
+                        <span>{{ globalData.recovered | number: '2.'}}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        <app-graph [uniqueId]="'Cases'"></app-graph>
+        <app-graph [uniqueId]="'Deaths'"></app-graph>
+        <app-graph [uniqueId]="'Recovered'"></app-graph>
+    </div>
+

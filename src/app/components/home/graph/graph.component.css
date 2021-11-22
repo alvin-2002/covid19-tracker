@@ -1,0 +1,48 @@
+
+.graph-card {
+    border: 1px solid lightgray;
+    width: 800px;
+    height: 620px;
+    padding: 10px 30px;
+    margin-top: 20px;
+}
+
+.graph-wrapper {
+    width: 750px;
+    height: 500px;
+    margin: 0;
+}
+
+a {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 820px) {
+    .graph-card {
+        width: 500px;
+        height: 580px;
+        padding: 10px 30px;
+        margin-top: 10px;
+    }
+    
+    .graph-wrapper {
+        width: 450px;
+        height: 450px;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .graph-card {
+        width: 400px;
+        height: 400px;
+        padding: 10px 30px;
+        margin-top: 10px;
+    }
+    
+    .graph-wrapper {
+        width: 350px;
+        height: 280px;
+        margin: 0;
+    }
+}
