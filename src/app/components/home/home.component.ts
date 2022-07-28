@@ -25,6 +25,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.dataService.getGlobalData().subscribe((data) => {
       this.globalData = data;
+      console.log(data);
     })
   }
 
